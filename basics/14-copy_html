@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -maxdepth 1 -name "*.html" -exec bash -c '[ ! -e "../$(basename {})" ] || [ "{}" -nt "../$(basename {})" ] && cp "{}" ../ && echo "Copied $(basename {})"' \;
+for file in *.html; do if [ ! -e "../$file" ]; then cp "$file" ../; elif [ "$file" -nt "../$file" ]; then cp "$file" ../; fi; done
