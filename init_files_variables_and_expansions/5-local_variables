@@ -1,2 +1,2 @@
 #!/bin/bash
-cat <(printenv) <(declare -P) <(declare -F)
+set
