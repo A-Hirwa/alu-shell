@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -empty | xargs -I {} sh -c 'echo "${0##*/}"' {}
+find . -empty -print0 | xargs -0 -n1 echo
