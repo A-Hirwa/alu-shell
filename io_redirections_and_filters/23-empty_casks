@@ -1,2 +1,2 @@
 #!/bin/bash
-find . \( -name '.*' -o -name '*' \) -empty -exec sh -c 'printf "%s\n" "${@##*/}"' _ {} +
+find . -empty -print | rev | cut -d'/' -f1 | rev
