@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -name "*.gif" -exec sh -c 'printf "%s\n" "${1##*/%.gif}"' _ {} +
+find . -type f -name "*.gif" -exec sh -c 'printf "%s\n" "${@##*/%.gif}"' _ {} + | LC_ALL=C sort -f
