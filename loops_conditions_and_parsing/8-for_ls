@@ -3,5 +3,5 @@
 contents=$(ls)
 for content in $contents
 do 
-   echo "${content#[0-9]*_}"
+   echo "${content#[0-9]*-}"
 done
