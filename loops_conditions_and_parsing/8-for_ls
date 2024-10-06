@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#displaying content name only
+contents=$(ls)
+for content in $contents
+do 
+   echo "$content" | sed "s/^[0-9]*-//"
+done
