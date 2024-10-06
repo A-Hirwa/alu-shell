@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+#printing hi on 9th iteration
+n=1
+while [ $n -le 10 ]
+do 
+  echo "Best school"
+  if [ $n = 9 ]
+  then
+     echo "Hi"
+  fi
+  ((n++))
+done
