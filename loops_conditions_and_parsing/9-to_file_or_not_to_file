@@ -3,9 +3,9 @@
 filename="school"
 
 if [ -e $filename ];then
-    echo "File exists"
+    echo "school file exists"
 else
-    echo "File doesn't exist"
+    echo "school file doesn't exist"
 fi
 if [ -z $filename ];then
 	echo "school file is empty"
@@ -13,7 +13,7 @@ else
 	echo "school file is not empty"
 fi
 if [ -f $filename ];then
-	echo "school is a regular files."
+	echo "school is a regular file"
 else
 	echo "(nothing)"
 fi
