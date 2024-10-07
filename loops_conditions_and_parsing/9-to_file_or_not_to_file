@@ -4,7 +4,7 @@ filename="school"
 
 if [ -e $filename ];then
     echo "school file exists"
-    if [ -z $filename ];then
+    if [ -s $filename ];then
 	    echo "school file is empty"
 	    if [ -f $filename ];then
 		    echo "school is a regular file"
