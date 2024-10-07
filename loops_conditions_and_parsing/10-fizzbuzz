@@ -2,7 +2,7 @@
 #fizzbuzz for multiple of 3 and 5
 n=1
 
-while (( $n  <= 100 ));do
+while (( n  <= 100 ));do
 	if ((n % 3 == 0 && n % 5 == 0));then
 	   echo "FizzBuzz"
 	elif ((n % 3 ==0));then
