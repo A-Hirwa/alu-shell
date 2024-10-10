@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 #Parses Apache log files in list format
+LOG_FILE="apache-access.log"
 
-file_name="apache-access.log"
-if test -f $file_name; then
-  awk '{print $1,$9}' $file_name | sort | uniq -c | sort -gr
+if [[ ! -f $LOG_FILE ]]; then
+    echo "Log file not found: $LOG_FILE"
+    exit 1
 fi
+
+awk '{print $1, $9}' "$LOG_FILE" | sort | uniq -c | sort -nr | awk '{print $1, $2, $3}'
