@@ -1,4 +1,4 @@
-#!usr/bin/env bash
+#!/usr/bin/env bash
 #telling passwd story
 
 while IFS=: read -r username password uid gid _ homedir shell; do
