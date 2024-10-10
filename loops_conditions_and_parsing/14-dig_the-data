@@ -3,5 +3,5 @@
 LOG_FILE="apache-access.log"
 
 if [[ -f $LOG_FILE ]]; then
-   awk '{print $1, $9}' "$LOG_FILE" | sort | uniq -c | sort -nr | awk '{print $1, $2, $3}'
+   awk '{print $1, $9}' "$LOG_FILE" | sort | uniq -c | sort -gr'
 fi
